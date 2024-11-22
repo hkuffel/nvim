@@ -17,4 +17,8 @@ vim.opt.rtp:prepend(lazypath)
 --  To update plugins you can run
 --    :Lazy update
 -- load plugins
-require('lazy').setup 'plugins'
+require('lazy').setup({ import = 'plugins' }, {
+  change_detection = {
+    notify = false,
+  },
+})
